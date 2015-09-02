@@ -47,6 +47,9 @@ def main():
     #set zero PWM channel output dutycycle = 1024 / 4096
     set_PWM_OFF(pca9685_addr, 0, 1024)
 
-if __name__ == 'main':
+
+
+
+if __name__ == '__main__':
     main()
 
