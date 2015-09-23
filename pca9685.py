@@ -1,6 +1,7 @@
 #coding=UTF-8
 
 import smbus
+import time
 
 pca9685_addr = 0x40
 bus = smbus.SMBus(1)
@@ -46,6 +47,10 @@ def main():
 
     #set zero PWM channel output dutycycle = 1024 / 4096
     set_PWM_OFF(pca9685_addr, 0, 1024)
+
+    time.sleep(1)
+
+    set_sleep(pca9685_addr)
 
 
 
